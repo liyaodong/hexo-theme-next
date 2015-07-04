@@ -1,1 +1,80 @@
 // Custom styles.
+
+// 标题去掉加粗
+.posts-expand .post-title {
+  font-weight normal
+}
+
+// 标题划过下划线增加间距
+.posts-expand .post-title-link::before {
+  bottom -2px
+}
+
+// 首页logo样式调整
+.brand {
+  border-radius: 2px;
+}
+
+.windmill-logo {
+  bgw = 120px
+  bgh = 255px
+  zoom = .4
+  position relative
+  display block
+  width 125px * zoom
+  height 150px * zoom
+  margin-left auto
+  margin-right auto
+  i {
+    display inline-block
+    position absolute
+    background-image url('../images/windmillw60@2x.png')
+    background-size bgw * zoom bgh * zoom
+  }
+  .windmill-top {
+    width 120px * zoom
+    height 138px * zoom
+    z-index 2
+    left 0
+    top 0
+    animation rotate 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+    animation-iteration-count infinite
+    transition animation 0.3s
+  }
+  .windmill-dot {
+    size = 14px * zoom
+    width size
+    height size
+    background-position-y -154px * zoom
+    top 75px * zoom - size
+    left 53px * zoom
+    z-index 3
+  }
+  .windmill-base {
+    width 44px * zoom
+    height 83px * zoom
+    background-position-y -172px * zoom
+    top 70px * zoom
+    left 38px * zoom
+    z-index 1
+  }
+  &:hover {
+    .windmill-top {
+      animation-duration 1s
+    }
+  }
+}
+
+@keyframes rotate
+  from
+    transform rotate(0)
+  to
+    transform rotate(1turn)
+
+// 阅读原文上边距调整
+.post-more-link {
+  margin-top 20px
+}
+.posts-expand .post-eof {
+  margin: 80px auto 60px;
+}
