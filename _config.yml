@@ -18,6 +18,15 @@ keywords: "耀东,晓风,博客,晓风东东,东东,互联网,设计,前端开�
 # Set rss to specific value if you have burned your feed already.
 rss:
 
+# link
+links:
+  Cloudy9101: http://cloudy9101.github.io/
+  Gavin's Blog: http://blog.ligan.me/
+  与爱同深: http://yxq01.sinaapp.com/
+  讲礼貌: http://jianglimao.sinaapp.com/
+  XJP的碎碎念: http://www.xjp.cc/
+  jason2Be: http://www.jason2be.com/
+
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
 # Avialable: default | linecons | fifty-shades | feather
