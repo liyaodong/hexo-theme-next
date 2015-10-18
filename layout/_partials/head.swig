@@ -42,6 +42,8 @@
   <link rel="shorticon icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
+{% include '../_scripts/og.swig' %}
+
 {# HEXO CONFIGURATIONS #}
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
