@@ -7,6 +7,7 @@
   function duoshuo() {
     duoshuoPjax('.ds-thread', 'EmbedThread');
     duoshuoPjax('.ds-share', 'ShareWidget');
+    duoshuoPjax('.ds-thread-count', 'ThreadCount');
   }
 
   function duoshuoPjax(className, type){
