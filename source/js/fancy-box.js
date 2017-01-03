@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('ready pjax:success', function() {
   $('.content img').each(function () {
     var $image = $(this);
     var $imageWrapLink = $image.parent('a');
