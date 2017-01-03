@@ -25,7 +25,7 @@ $(document).on('ready pjax:complete', function (e) {
   var sidebarToggleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
 
   if (e.type !== 'pjax:complete') LogoAndMenuMotion();
-  
+
   sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
