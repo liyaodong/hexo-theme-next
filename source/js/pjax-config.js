@@ -4,14 +4,43 @@
 
   $(document).pjax('a[href^="/"]', '#content', { fragment: '#content' });
 
-  function duoshuo(){
-    var dus=$(".ds-thread");
-    if($(dus).length !== 1) return;
+  function duoshuo() {
+    duoshuoPjax('.ds-thread', 'EmbedThread');
+    duoshuoPjax('.ds-share', 'ShareWidget');
+  }
 
-    var el = document.createElement('div');
-    el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
-    el.setAttribute('data-url',$(dus).attr("data-url"));
-    DUOSHUO.EmbedThread(el);
-    $(dus).html(el);
+  function duoshuoPjax(className, type){
+    DUOSHUO.initSelector(className, { type: type });
   }
 })();
+
+/**
+
+// duoshuo type matrix
+
+".ds-thread": {
+    type: "EmbedThread"
+},
+".ds-recent-comments": {
+    type: "RecentComments"
+},
+".ds-recent-visitors": {
+    type: "RecentVisitors"
+},
+".ds-top-users": {
+    type: "TopUsers"
+},
+".ds-top-threads": {
+    type: "TopThreads"
+},
+".ds-login": {
+    type: "LoginWidget"
+},
+".ds-thread-count": {
+    type: "ThreadCount"
+},
+".ds-share": {
+    type: "ShareWidget"
+}
+
+**/
