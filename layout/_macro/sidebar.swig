@@ -21,7 +21,7 @@
         </ul>
       {% endif %}
 
-      <div class="site-overview">
+      <div class="site-overview" {% if (theme.pjax) %} style="display: block;" {% endif %}>
         <div class="site-author motion-element">
           <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" />
           <p class="site-author-name">{{ theme.author }}</p>
@@ -89,7 +89,7 @@
             {% endfor %}
           {% endif %}
         </div>
-        
+
       </div>
 
       {% if is_post %}

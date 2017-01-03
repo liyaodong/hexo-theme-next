@@ -39,12 +39,14 @@
 {% endblock %}
 
 {% block sidebar %}
-  {{ sidebar_template.render(true) }}
+  {{ sidebar_template.render(true && theme.pjax === false) }}
 {% endblock %}
 
 
 {% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
+  {% if (theme.pjax !== true) %}
+    {% include '_scripts/pages/post-details.swig' %}
+  {% endif %}
 {% endblock %}
 
 {% block comment_system %}

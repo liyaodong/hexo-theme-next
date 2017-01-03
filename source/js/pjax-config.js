@@ -4,13 +4,15 @@
 
   $(document).pjax('a[href^="/"]', '#content', { fragment: '#content' });
 
+
   function duoshuo() {
     duoshuoPjax('.ds-thread', 'EmbedThread');
     duoshuoPjax('.ds-share', 'ShareWidget');
     duoshuoPjax('.ds-thread-count', 'ThreadCount');
   }
 
-  function duoshuoPjax(className, type){
+  function duoshuoPjax(className, type) {
+    if (typeof DUOSHUO === 'undefined') return;
     DUOSHUO.initSelector(className, { type: type });
   }
 })();
