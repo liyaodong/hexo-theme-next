@@ -3,6 +3,7 @@
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/index.js?v=2.1.3"></script>
 </head>
 
 <body>
@@ -40,8 +41,6 @@
 
     <div class="back-to-top"></div>
   </div>
-
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/index.js?v=2.1.3"></script>
 
   {# This block is used to set options before any other scripts run #}
   {% block script_extra_before %}{% endblock %}
