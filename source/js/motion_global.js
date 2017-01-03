@@ -34,6 +34,8 @@ $(document).on('ready pjax:complete', function (e) {
   //add motion effect to toc
   $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
 
+  // motion archive page title
+  $('.archive-year').velocity('transition.slideLeftIn');
 
   //当前选择的是目录列表时添加 class 'motion-element'
   sidebar.bind('click', function(e){
