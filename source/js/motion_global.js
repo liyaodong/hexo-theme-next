@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('ready pjax:complete', function (e) {
   var body = $('body');
   var isSidebarVisible = false;
   var sidebarToggle = $('.sidebar-toggle');
@@ -24,7 +24,8 @@ $(document).ready(function () {
   var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
   var sidebarToggleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
 
-  LogoAndMenuMotion();
+  if (e.type !== 'pjax:complete') LogoAndMenuMotion();
+  
   sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
@@ -35,7 +36,7 @@ $(document).ready(function () {
 
 
   //当前选择的是目录列表时添加 class 'motion-element'
-  sidebar.bind('click', function(e){ 
+  sidebar.bind('click', function(e){
     if(!!$('.sidebar-nav-toc') && e.target == $('.sidebar-nav-toc')[0]){
       $('.post-toc-wrap').addClass('motion-element');
     }});
@@ -55,7 +56,7 @@ $(document).ready(function () {
         SIDEBAR_DISPLAY_DURATION
       );
       // sidebar 内容的效果应该在sidebarsidebarShowMotion内触发
-      // sidebarContentMotion(); 
+      // sidebarContentMotion();
     })
     .on('sidebar.isHiding', function () {});
 

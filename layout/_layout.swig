@@ -9,8 +9,6 @@
   {% include '_partials/old-browsers.swig' %}
 
   <div class="container one-column {% block page_class %}{% endblock %}">
-    <div class="headband"></div>
-
     <div id="header" class="header">
       <div class="header-inner">
         {% include '_partials/header.swig' %}
@@ -48,6 +46,7 @@
   {# This block is used to set options before any other scripts run #}
   {% block script_extra_before %}{% endblock %}
 
+  {% include '_scripts/pjax.swig' %}
   {% include '_scripts/fancy-box.swig' %}
   {% include '_scripts/helpers.swig' %}
   {% include '_scripts/motion.swig' %}

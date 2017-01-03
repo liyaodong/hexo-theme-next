@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('ready pjax:complete', function () {
   var isSidebarVisible;
   var DURATION = 300;
   var SIDEBAR_WIDTH = 320;
